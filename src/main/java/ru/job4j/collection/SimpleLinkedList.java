@@ -11,7 +11,6 @@ public class SimpleLinkedList<E> implements LinkedList<E> {
     private int modCount = 0;
     private Node<E> head;
 
-
     @Override
     public void add(E value) {
         Node<E> newNode = new Node<>(value, null);

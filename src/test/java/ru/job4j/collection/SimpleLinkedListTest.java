@@ -93,7 +93,7 @@ class SimpleLinkedListTest {
     }
 
     @Test
-    void NoSuchElementException() {
+    void whenNoSuchElementException() {
         Iterator<Integer> it = list.iterator();
         assertThat(it.next()).isEqualTo(1);
         assertThat(it.next()).isEqualTo(2);
@@ -102,7 +102,7 @@ class SimpleLinkedListTest {
     }
 
     @Test
-    void ConcurrentModificationException() {
+    void whenConcurrentModificationException() {
         Iterator<Integer> it = list.iterator();
         list.add(4);
         assertThatThrownBy(it::next)
